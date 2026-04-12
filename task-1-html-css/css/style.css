@@ -464,7 +464,7 @@ ol {
 
 .hero-card {
     border-radius: 20px;
-    padding: 60px 40px;
+    padding: 30px 20px;
     display: flex;
     align-items: center;
     gap: 16px;
@@ -526,22 +526,6 @@ ol {
     display: block;
 }
 
-/* MEDIA QUERIES FOR HERO */
-@media (max-width: 992px) {
-    .hero-top {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .hero-content {
-        max-width: 100%;
-    }
-
-    .hero-cards-row {
-        grid-template-columns: 1fr;
-    }
-}
-
 /* ============================================
    OUR PRACTICE SECTION
    ============================================ */
@@ -569,7 +553,7 @@ ol {
     left: 0;
     width: 100%;
     transform: translateY(100%);
-    z-index: 0;
+    z-index: 1;
     pointer-events: none;
     display: block;
 }
@@ -670,58 +654,24 @@ ol {
     display: block;
 }
 
-/* Responsive updates */
-@media (max-width: 992px) {
-    .practice-gallery {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .img-1 {
-        border-radius: 40px 0 0 0;
-    }
-
-    .img-2 {
-        border-radius: 0 40px 0 0;
-    }
-
-    .img-3 {
-        border-radius: 0 0 0 40px;
-    }
-
-    .img-4 {
-        border-radius: 0 0 40px 0;
-    }
-
-    .practice-bottom {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .highlight-mask {
-        display: none;
-    }
-}
-
 /* ============================================
    DOCTOR SECTION
    ============================================ */
 .doctor {
     position: relative;
-    padding-top: calc(var(--section-padding) * 3);
+    padding-top: calc(var(--section-padding) * 4);
     padding-bottom: calc(var(--section-padding) * 2.5);
     background-color: var(--color-white);
     overflow: hidden;
+    z-index: -1;
 }
 
 .doctor-bg-left {
     position: absolute;
     top: 5%;
-    left: -15%;
-    width: 60vw;
-    height: 80vw;
-    background-color: #F8F9FA;
-    border-radius: 50%;
-    z-index: 0;
+    width: 90%;
+    z-index: 2;
+    object-fit: cover;
 }
 
 .doctor .container {
@@ -731,30 +681,8 @@ ol {
 
 .doctor-header {
     text-align: center;
-    max-width: 700px;
+    max-width: 800px;
     margin: 0 auto 80px;
-}
-
-.doctor-pre-header-wrap {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 16px;
-    margin-bottom: var(--gap-md);
-}
-
-.doctor-pre-header {
-    color: var(--color-text-preHeader);
-    padding: 0;
-}
-
-.doctor-pre-header-wrap::before,
-.doctor-pre-header-wrap::after {
-    content: '';
-    display: block;
-    height: 1px;
-    width: 30px;
-    background-color: rgba(10, 93, 46, 0.3);
 }
 
 .doctor-title {
@@ -791,8 +719,7 @@ ol {
     border-top-left-radius: 40px;
     border-bottom-right-radius: 20px;
     padding: 40px 10px;
-    width: 48%; /* Cover left section */
-    height: 60%;
+    width: 35%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -803,7 +730,7 @@ ol {
 .exp-num {
     font-family: var(--font-heading);
     font-weight: 700;
-    font-size: 72px; 
+    font-size: 72px;
     color: var(--color-text);
     line-height: 1;
     margin-bottom: 20px;
@@ -812,7 +739,7 @@ ol {
 .exp-text {
     font-family: var(--font-heading);
     font-weight: 600;
-    font-size: 15px;
+    font-size: 18px;
     line-height: 1.5;
     color: var(--color-text);
 }
@@ -832,14 +759,106 @@ ol {
     line-height: 1.6;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 768px) {
+    .hero-top {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero-cards-row {
+        grid-template-columns: 1fr;
+    }
+
+    .practice-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .img-1 {
+        border-radius: 40px 0 0 0;
+    }
+
+    .img-2 {
+        border-radius: 0 40px 0 0;
+    }
+
+    .img-3 {
+        border-radius: 0 0 0 40px;
+    }
+
+    .img-4 {
+        border-radius: 0 0 40px 0;
+    }
+
+    .practice-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .highlight-mask {
+        display: none;
+    }
+
     .doctor-content {
         flex-direction: column;
         gap: 40px;
     }
-    
+
     .experience-badge {
         width: 40%;
+    }
+}
+
+@media (max-width: 480px) {
+    .practice-top-shape {
+        top: 0;
+    }
+
+    .img-1 {
+        border-radius: 0 0 0 40px;
+    }
+
+    .img-2 {
+        border-radius: 0 40px 0 0;
+    }
+
+    .img-3,
+    .img-4 {
+        display: none;
+    }
+
+    .practice-text {
+        width: 100%;
+    }
+
+    .practice {
+        padding-bottom: 40px;
+    }
+
+    .doctor {
+        padding-top: calc(var(--section-padding) * 2);
+    }
+
+    .experience-badge {
+        width: 60%;
+    }
+
+    .exp-num {
+        font-size: 40px;
+    }
+
+    .exp-text {
+        font-size: 14px;
+    }
+
+    .doctor-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 }
 
