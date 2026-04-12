@@ -50,15 +50,15 @@ ul, ol {
     --font-heading: 'Quicksand', sans-serif;
     --font-body: 'Lato', sans-serif;
 
-    /* Colors — inspect the Figma color palette to get exact hex values */
-    /* TODO: Fill in the exact colors from the Figma file */
-    --color-primary: #______;      /* Main brand color (inspect from Figma) */
-    --color-secondary: #______;    /* Secondary color (inspect from Figma) */
-    --color-accent: #______;       /* Accent/highlight color (inspect from Figma) */
-    --color-text: #______;         /* Main text color (inspect from Figma) */
-    --color-text-light: #______;   /* Light/muted text (inspect from Figma) */
-    --color-white: #FFFFFF;
-    --color-bg-light: #______;     /* Light background sections (inspect from Figma) */
+    /* Colors from provided reference */
+    --color-primary: #00BC4D;      /* Main brand color / CTA */
+    --color-secondary: #EC9F05;    /* Secondary color */
+    --color-tertiary: #B7E807;     /* Added tertiary color */
+    --color-accent: #2CD080;       /* Accent/highlight color */
+    --color-text: #030712;         /* Base Black / Main text */
+    --color-text-light: #717680;   /* Base Gray / Light text */
+    --color-white: #FFFFFF;        /* Base White */
+    --color-bg-light: #CED0D3;     /* Base Light gray / Light bg */
 
     /* Spacing */
     --container-width: 1240px;
