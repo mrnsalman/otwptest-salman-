@@ -19,32 +19,41 @@
 
 // Simulated data
 $practice_info = [
-    'name'    => 'Sunshine Dental Clinic',
+    'name' => 'Sunshine Dental Clinic',
     'tagline' => 'Your Smile, Our Priority <script>alert("hacked")</script>',
-    'phone'   => '(555) 123-4567',
+    'phone' => '(555) 123-4567',
     'address' => '123 Main Street, Suite 200',
 ];
 
 $services = [
-    ['title' => 'General Dentistry',  'icon' => '🦷', 'desc' => 'Routine checkups and cleanings.'],
-    ['title' => 'Orthodontics',       'icon' => '😁', 'desc' => 'Braces and Invisalign for all ages.'],
+    ['title' => 'General Dentistry', 'icon' => '🦷', 'desc' => 'Routine checkups and cleanings.'],
+    ['title' => 'Orthodontics', 'icon' => '😁', 'desc' => 'Braces and Invisalign for all ages.'],
     ['title' => 'Cosmetic Dentistry', 'icon' => '✨', 'desc' => 'Veneers, whitening, and smile makeovers.'],
 ];
 
 $testimonials = [
-    ['name' => 'John D.',    'text' => 'Best dental experience ever!', 'rating' => 5],
-    ['name' => 'Sarah M.',   'text' => 'Very professional and caring staff.', 'rating' => 4],
-    ['name' => 'Ahmed K.',   'text' => 'Transformed my smile completely.', 'rating' => 5],
+    ['name' => 'John D.', 'text' => 'Best dental experience ever!', 'rating' => 5],
+    ['name' => 'Sarah M.', 'text' => 'Very professional and caring staff.', 'rating' => 4],
+    ['name' => 'Ahmed K.', 'text' => 'Transformed my smile completely.', 'rating' => 5],
 ];
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title><?php echo $practice_info['name']; ?></title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Lato', sans-serif; color: #333; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            color: #333;
+        }
 
         .hero {
             background: #2E86AB;
@@ -52,25 +61,36 @@ $testimonials = [
             padding: 80px 20px;
             text-align: center;
         }
-        .hero h1 { font-family: 'Quicksand', sans-serif; font-size: 48px; margin-bottom: 16px; }
-        .hero p { font-size: 20px; }
+
+        .hero h1 {
+            font-family: 'Quicksand', sans-serif;
+            font-size: 48px;
+            margin-bottom: 16px;
+        }
+
+        .hero p {
+            font-size: 20px;
+        }
 
         .services {
             padding: 60px 20px;
             max-width: 1200px;
             margin: 0 auto;
         }
+
         .services h2 {
             text-align: center;
             font-family: 'Quicksand', sans-serif;
             font-size: 36px;
             margin-bottom: 40px;
         }
+
         .services-grid {
             display: flex;
             gap: 30px;
             justify-content: center;
         }
+
         .service-card {
             background: #f9f9f9;
             padding: 30px;
@@ -78,19 +98,29 @@ $testimonials = [
             text-align: center;
             width: 300px;
         }
-        .service-card .icon { font-size: 48px; margin-bottom: 16px; }
-        .service-card h3 { font-family: 'Quicksand', sans-serif; margin-bottom: 8px; }
+
+        .service-card .icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+        }
+
+        .service-card h3 {
+            font-family: 'Quicksand', sans-serif;
+            margin-bottom: 8px;
+        }
 
         .testimonials {
             background: #f0f7fa;
             padding: 60px 20px;
         }
+
         .testimonials h2 {
             text-align: center;
             font-family: 'Quicksand', sans-serif;
             font-size: 36px;
             margin-bottom: 40px;
         }
+
         .testimonial-grid {
             display: flex;
             gap: 30px;
@@ -98,13 +128,19 @@ $testimonials = [
             margin: 0 auto;
             justify-content: center;
         }
+
         .testimonial-card {
             background: white;
             padding: 24px;
             border-radius: 12px;
             width: 300px;
         }
-        .stars { color: gold; font-size: 20px; margin-bottom: 12px; }
+
+        .stars {
+            color: gold;
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
 
         /* BUG IS IN THIS MEDIA QUERY — FIND IT */
         @media (max-width: 768px) {
@@ -112,20 +148,24 @@ $testimonials = [
                 flex-direction: column;
                 align-items: center;
             }
+
             .testimonial-grid {
                 flex-direction: column;
                 align-items: center;
             }
-            .hero h1 { font-size: 32px; }
 
+            .hero h1 {
+                font-size: 32px;
+            }
     </style>
 </head>
+
 <body>
 
     <!-- Hero Section -->
     <section class="hero">
         <h1><?php echo $practice_info['name']; ?></h1>
-        <p><?php echo $practice_info['tagline']; ?></p>
+        <p><?php echo htmlspecialchars($practice_info['tagline']); ?></p>
     </section>
 
     <!-- Services Section -->
