@@ -661,8 +661,16 @@ ol {
     color: #030712;
 }
 
+.btn-primary:hover .btn-text {
+    color: var(--color-white);
+}
+
 .btn-primary .btn-icon {
     border-color: var(--color-accent);
+}
+
+.btn-primary:hover .btn-icon {
+    background-color: var(--color-accent);
 }
 
 .practice-highlight-img {
@@ -786,6 +794,11 @@ ol {
 }
 
 @media (max-width: 768px) {
+
+    .container {
+        padding: 0 var(--gap-xl);
+    }
+
     .hero-top {
         flex-direction: column;
         text-align: center;
@@ -795,42 +808,90 @@ ol {
         max-width: 100%;
     }
 
+    .hero-img {
+        max-width: 100%;
+    }
+
     .hero-cards-row {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .hero-card {
+        flex-direction: column;
+        align-items: start;
+        padding: 24px 16px;
+    }
+
+    .card-tooth {
+        width: 60px;
+        height: 60px;
     }
 
     .practice-gallery {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .practice-header {
+        margin-bottom: 40px;
+    }
+
+    .practice-text {
+        width: 100%;
+    }
+
+    .practice-highlight-img {
+        width: 100%;
     }
 
     .img-1 {
-        border-radius: 40px 0 0 0;
-    }
-
-    .img-2 {
-        border-radius: 0 40px 0 0;
-    }
-
-    .img-3 {
         border-radius: 0 0 0 40px;
     }
 
+    .img-2 {
+        border-radius: 0 0 0 0;
+    }
+
+    .img-3 {
+        border-radius: 0 40px 0 0;
+    }
+
     .img-4 {
-        border-radius: 0 0 40px 0;
+        display: none;
+    }
+
+    .practice-top-shape {
+        top: 0;
+    }
+
+    .practice-bottom-shape {
+        bottom: 1px;
     }
 
     .practice-bottom {
-        flex-direction: column;
+        flex-direction: column-reverse;
         text-align: center;
+        gap: 40px;
     }
 
     .highlight-mask {
         display: none;
     }
 
+    .doctor {
+        padding-top: calc(var(--section-padding) * 2);
+        padding-bottom: calc(var(--section-padding) * 1);
+    }
+
     .doctor-content {
         flex-direction: column;
         gap: 40px;
+    }
+
+    .doctor-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
     .experience-badge {
@@ -856,10 +917,6 @@ ol {
         display: none;
     }
 
-    .practice-text {
-        width: 100%;
-    }
-
     .practice {
         padding-bottom: 40px;
     }
@@ -878,13 +935,6 @@ ol {
 
     .exp-text {
         font-size: 14px;
-    }
-
-    .doctor-info {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
     }
 }
 
