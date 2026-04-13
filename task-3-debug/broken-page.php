@@ -42,7 +42,7 @@ $testimonials = [
 
 <head>
     <meta charset="UTF-8">
-    <title><?php echo $practice_info['name']; ?></title>
+    <title><?php echo htmlspecialchars($practice_info['name']); ?></title>
     <style>
         * {
             margin: 0;
