@@ -18,26 +18,6 @@
 </head>
 
 <body>
-
-    <!--
-        TASK 1: Build the 3 sections from the Figma design below.
-        Look at the Figma file for the design.
-        Look at reference/FIGMA-LINK.md for how to access and inspect the design.
-
-        The 3 sections you need to build:
-        1. Hero Section ("Simple & Affordable")
-        2. Our Practice Section
-        3. Doctor Section
-
-        Requirements:
-        - Must be responsive: Desktop (1440px), Tablet (768px), Mobile (320px)
-        - Use the CSS variables defined in style.css
-        - Use placeholder images from https://placehold.co/ or export from Figma
-        - Implement button hover states (shown in Figma)
-        - No CSS frameworks allowed (no Bootstrap, no Tailwind)
-    -->
-
-    <!-- START YOUR CODE HERE -->
     <section class="hero">
         <img src="images/icon/big-teeth-icon.svg" alt="Big Teeth Icon" class="hero-bg-left">
         <div class="container">
@@ -70,6 +50,7 @@
                         <span class="card-num h4">1</span>
                     </div>
                     <span class="card-text h6">REQUEST<br>AN EXAM</span>
+                    <img src="images/image/request-exam-block-hover-bg.webp" alt="card 1 image" class="card-img">
                 </div>
                 <div class="hero-card card-2">
                     <div class="card-tooth">
@@ -77,6 +58,7 @@
                         <span class="card-num h4">2</span>
                     </div>
                     <span class="card-text h6">SELECT LOW<br>MONTHLY PAYMENT</span>
+                    <img src="images/image/payment-block-hover-bg.webp" alt="card 2 image" class="card-img">
                 </div>
                 <div class="hero-card card-3">
                     <div class="card-tooth">
@@ -84,8 +66,15 @@
                         <span class="card-num h4">3</span>
                     </div>
                     <span class="card-text h6">SIT BACK, RELAX &<br>GET STARTED</span>
+                    <img src="images/image/get-started-block-hover-bg.webp" alt="card 3 image" class="card-img">
                 </div>
             </div>
+            <a href="#" class="btn btn-primary">
+                <span class="btn-text">REQUEST AN EXAM</span>
+                <div class="btn-icon">
+                    <img src="images/icon/button-arrow-icon.svg" alt="Arrow">
+                </div>
+            </a>
         </div>
     </section>
 
@@ -170,8 +159,6 @@
             </div>
         </div>
     </section>
-    <!-- END YOUR CODE HERE -->
-
 </body>
 
 </html>
